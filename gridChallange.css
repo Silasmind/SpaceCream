@@ -1,0 +1,268 @@
+*{
+    padding:0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    
+    font-size: 62.5%;
+    --fonthead:'Staatliches';
+    
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #8E9AAF;
+    animation: downtop 700ms;
+    
+}
+header img{
+    margin:3.2rem 0 ;
+    animation: topdown 700ms;
+}
+
+  
+
+header h1{
+    font-family: var(--fonthead);
+    font-size: 4.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05%;
+    font-weight: 400;
+
+    background-color: #CBC0D3;
+    width: 100%;
+    color: #ffff;
+    padding:0.8rem 0  ;
+    margin-bottom: 2.9rem ;
+}
+
+header p{
+    color:  #FFFFFF;
+    font-family: 'Palanquin';
+
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.0rem;
+    
+    margin: 0 4.3rem  6.3rem;
+    display: none;
+
+  
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.8rem 3.2rem 6rem;
+}
+main p{
+    text-align: center;
+    
+color: #23053A;
+    
+font-family: 'Palanquin';
+
+font-weight: 700;
+font-size: 1.8rem;
+line-height: 2.5rem;
+margin-bottom: 6.3rem;
+}
+main footer{ 
+
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    margin-bottom: 4.6rem;
+    margin-top:10.2rem;
+    
+;
+
+
+}
+main footer a{
+    text-decoration: none;
+    color:#4A4E69 ;
+}
+.grid{
+    display: grid;
+    gap: 3.2rem;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.card{
+
+position: relative;
+
+
+}
+.card img{
+   
+    width: 100%;
+    border-radius: 2rem;
+    transition:all 200ms;
+}
+.card img:hover{
+    transform: scale(1.1);
+}
+.grid .card{
+    position: relative;
+
+}
+
+.card h2{
+    text-align: center;
+    border-radius: 20px;
+    color: #4A4E69;
+    background: #FEEAFA;
+
+   font-family: var(--fonthead);
+   width: 11.2rem;
+
+
+font-weight: 400;
+font-size: 2.0rem;
+line-height: 3.4rem;
+text-transform: uppercase;
+position: absolute;
+left: 20.2rem;
+top: 1.0rem;
+
+}
+@keyframes topdown {
+    0%{ opacity: 0;
+        transform: translateY(-15px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes downtop {
+    0%{ opacity: 0;
+        transform: translateY(15px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width:900px) {
+    
+    footer{
+        margin-left: 55.7rem;
+    }
+    #paleta, #picole{
+        display: none;
+
+    }
+ 
+   .grid .card h2{
+    display: none;
+   }
+    .page{
+        display: flex;
+    }
+    main p{
+        display: none;
+    }
+    header p{
+        display: block;
+    }
+    header{
+        height: 100vh;
+        width: 37.7rem;
+        position: fixed;
+        
+
+
+    }
+   .page{
+    display: flex;
+   }
+   .grid{
+    margin-left:50.7rem;
+    display: grid;
+
+    grid-template-areas: 
+    'A B'
+    'C B'
+    'C D';
+    }
+    .grid .card:nth-child(1){
+        grid-area: A;
+    }
+    .grid .card:nth-child(2){
+        grid-area: B;
+    }
+    .grid .card:nth-child(4){
+        grid-area: C;
+    }
+    .grid .card:nth-child(5){
+        grid-area: D;
+ 
+    
+
+
+   }
+}
+@media(min-width: 1440px){
+    #paleta, #picole{
+        display: block;
+
+    }
+  
+    footer{
+        margin-left: 55.7rem;
+    }
+    .grid{
+        animation: rightLeft 700ms;
+        height: 100%;
+        grid-template-areas: 
+        'A B C'
+        'D B E'
+        'D F E';
+    }
+    
+    .grid .card:nth-child(1){
+        grid-area: A;
+    }
+    .grid .card:nth-child(2){
+        grid-area: B;
+    }
+    .grid .card:nth-child(3){
+        grid-area: C;
+    }
+    .grid .card:nth-child(4){
+        grid-area: D;
+    }
+    .grid .card:nth-child(5){
+        grid-area: F;
+    }
+    .grid .card:nth-child(6){
+        grid-area: E;
+    }
+}
+
+@keyframes rightLeft{
+
+    0%{
+        opacity:0;
+        transform:translateX(30px)
+    }
+    100%{ 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
